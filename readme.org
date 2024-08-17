@@ -1,0 +1,3 @@
+#+TITLE:NixOS Configuration
+
+I've been intrigued by the replicability and determinate setup of Nix which seems like it may solve the age old issue of /works on my computer/ along with helping me to manage multiple (3-5) machines
