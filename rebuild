@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+pushd ~/nix-config
+sudo nixos-rebuild switch &>nixos-switch.log || (
+  cat nixos-switch.log | grep --color error && false)
+gen=$(nixos-rebuild list-generations | grep current)
+echo "git commit -am $gen"
+popd
