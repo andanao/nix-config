@@ -53,7 +53,7 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-    options="caps:ctrl_modifier";
+    options="ctrl:nocaps";
   };
 
   # Enable CUPS to print documents.
@@ -101,21 +101,24 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
-    wget
-    git
-    home-manager
-    emacs
+    alacritty
+    bambu-studio
+    cantarell-fonts
+    emacs30
     fira-code
     fira-code-nerdfont
-    noto-fonts
-    cantarell-fonts
-    texlivePackages.etbb
-    bambu-studio
+    git
+    gnumake
+    home-manager
     neofetch
-    alacritty
-    zsh
+    neovim
+    noto-fonts
+    rustup
     starship
+    syncthing
+    texlivePackages.etbb
+    wget
+    zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
