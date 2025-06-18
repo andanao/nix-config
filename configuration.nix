@@ -125,11 +125,12 @@
     neovim
     wget
     emacs
-    parted
 
     fira-code-nerdfont
     cantarell-fonts
     noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
 
     starship
     neofetch
@@ -141,7 +142,7 @@
     bottles
     session-desktop
     discord
-    bambu-studio
+    orca-slicer
   ];
 
   programs.git = {
@@ -160,10 +161,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      vi = "nvim";
       jkl = "cd ~/git/";
-      nurse = "sudo nixos-rebuild switch";
-      nsp = "nix-shell -p";
+      nurse = "sudo nixos-rebuild switch --flake";
     };
   };
   users.defaultUserShell = pkgs.zsh;
@@ -190,8 +189,12 @@
   };
 
   environment.shellAliases = {
+    vi = "nvim";
     ll = "ls -l";
+    la = "ls -la";
     gs = "git status";
+
+    nsp = "nix-shell -p";
   };
 
   # Some programs need SUID wrappers, can be configured further or are

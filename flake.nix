@@ -2,7 +2,7 @@
   description = "my nixos config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
   };
 
   outputs = { self, nixpkgs, ... }:
