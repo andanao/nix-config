@@ -4,7 +4,7 @@
     locale.enable = lib.mkEnableOption "enable locale";
   };
 
-  config = lib.mkIf config.gaming.enable {
+  config = lib.mkIf config.locale.enable {
     time.timeZone = "America/New_York";
 
     i18n.defaultLocale = "en_US.UTF-8";
