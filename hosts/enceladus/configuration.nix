@@ -7,6 +7,8 @@
       ../../modules/default.nix
     ];
 
+  networking.hostName = "enceladus"; # Define your hostname.
+
   # enable opengl
   hardware.graphics.enable = true;
 
@@ -20,15 +22,11 @@
 
   nix.settings.experimental-features = ["flakes" "nix-command"];
 
+  gaming.enable = true;
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "enceladus"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   networking.networkmanager.enable = true;
 
@@ -56,9 +54,6 @@
     pulse.enable = true;
     jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
 
@@ -133,7 +128,6 @@
   };
   users.defaultUserShell = pkgs.zsh;
 
-  gaming.enable = true;
 
   programs.coolercontrol = {
     enable = true;

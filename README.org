@@ -1,0 +1,5 @@
+#+TITLE:NixOS Configuration
+
+I'm still working on gettting this sorted to something that I'm happier with,
+still not sure if I like this setup or will do a single file tangled with org
+mode.
