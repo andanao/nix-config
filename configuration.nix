@@ -98,10 +98,14 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+  };
+
   environment.systemPackages = with pkgs; [
     neovim
     wget
-    emacs
 
     fira-code-nerdfont
     cantarell-fonts
