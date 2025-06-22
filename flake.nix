@@ -13,7 +13,7 @@
         enceladus = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./configuration.nix
+            ./hosts/enceladus/configuration.nix
           ];
         };
       };
