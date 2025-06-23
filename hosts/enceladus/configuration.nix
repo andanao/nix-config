@@ -98,12 +98,9 @@
     noto-fonts-emoji
 
     starship
-    neofetch
     kitty
 
     cargo
-    rustc
-
     python3
 
     session-desktop
