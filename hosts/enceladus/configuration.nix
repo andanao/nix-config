@@ -111,16 +111,7 @@
   ];
 
 
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-
-    shellAliases = {
-      jkl = "cd ~/git/";
-      nurse = "sudo nixos-rebuild switch --flake ~/nix/";
-    };
-  };
+  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
 
 
