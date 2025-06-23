@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../../modules/default.nix
+      ../../modules
     ];
 
   networking.hostName = "enceladus"; # Define your hostname.
@@ -88,6 +88,7 @@
     home-manager
     neovim
     wget
+    gnumake
 
     fira-code-nerdfont
     cantarell-fonts
