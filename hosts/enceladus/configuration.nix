@@ -74,8 +74,9 @@
     }
   ];
 
-  # Install firefox.
+  programs.git.enable = true;
   programs.firefox.enable = true;
+
 
   nixpkgs.config.allowUnfree = true;
 
@@ -106,20 +107,9 @@
     python3
 
     session-desktop
-    discord
     orca-slicer
   ];
 
-
-  programs.git = {
-    enable = true;
-    config = {
-      user.name = "Adrian Danao-Schroeder";
-      user.email = "adriandanao@gmail.com";
-      init.defaultBranch = "main";
-      pull.rebase = true;
-    };
-  };
 
   programs.zsh = {
     enable = true;
