@@ -23,6 +23,7 @@
   nix.settings.experimental-features = ["flakes" "nix-command"];
 
   gaming.enable = true;
+  virtualization.enable = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -100,11 +101,13 @@
     cargo
     rustc
 
-    bottles
+    python3
+
     session-desktop
     discord
     orca-slicer
   ];
+
 
   programs.git = {
     enable = true;
@@ -123,7 +126,7 @@
 
     shellAliases = {
       jkl = "cd ~/git/";
-      nurse = "sudo nixos-rebuild switch --flake";
+      nurse = "sudo nixos-rebuild switch --flake ~/nix/";
     };
   };
   users.defaultUserShell = pkgs.zsh;
