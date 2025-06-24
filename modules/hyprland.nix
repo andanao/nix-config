@@ -4,19 +4,17 @@
   };
 
   config = lib.mkIf config.hyprland.enable {
+
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
       withUWSM = true;
 
-      security.pam.services.hyprlock = {};
+      # security.pam.services.hyprlock = {};
     };
-    wayland.windowManager.hyprland = {
-      enable = true;
-      settings = {
-
-      }
-    };
+    # wayland.windowManager.hyprland = {
+    #   enable = true;
+    # };
 
 
 
@@ -43,9 +41,7 @@
     #   NIXOS_OZONE_WL = "1";
     # };
 
-    hardware = {
-      opengl.enable = true;
-    };
+    hardware.graphics.enable = true;
 
   };
 
