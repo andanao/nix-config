@@ -58,11 +58,10 @@
 
   };
 
-
   users.users.adrian = {
     isNormalUser = true;
     description = "adrian";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "input" "uinput"];
   };
 
   security.sudo.extraRules= [

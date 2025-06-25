@@ -5,6 +5,7 @@
     ./virtualization.nix
     ./hyprland.nix
     ./flatpak.nix
+    ./kanata.nix
   ];
 
   gaming.enable = lib.mkDefault false;
@@ -12,5 +13,6 @@
   virtualization.enable = lib.mkDefault false;
   hyprland.enable = lib.mkDefault true;
   flatpak.enable = lib.mkDefault true;
+  kanata.enable = lib.mkDefault true;
 
 }
