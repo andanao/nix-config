@@ -22,12 +22,14 @@
       kitty
       waybar
 
-      hyprpaper
       swww
 
       dunst
       libnotify
       rofi-wayland
+
+      wl-clipboard
+      # hyprland-qtutils # needed for banners and ANR messages
     ];
 
     xdg.portal = {
