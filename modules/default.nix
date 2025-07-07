@@ -6,13 +6,15 @@
     ./hyprland.nix
     ./flatpak.nix
     ./kanata.nix
+    ./syncthing.nix
   ];
 
   gaming.enable = lib.mkDefault false;
-  locale.enable = lib.mkDefault true;
   virtualization.enable = lib.mkDefault false;
+
+  locale.enable = lib.mkDefault true;
   hyprland.enable = lib.mkDefault true;
   flatpak.enable = lib.mkDefault true;
   kanata.enable = lib.mkDefault true;
-
+  syncthing.enable = lib.mkDefault true;
 }

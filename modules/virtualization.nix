@@ -10,7 +10,6 @@
       bottles
       qemu
       quickemu
-
       quickgui
     ];
 
@@ -21,6 +20,10 @@
     virtualisation.libvirtd.enable = true;
 
     virtualisation.spiceUSBRedirection.enable = true;
+
+    virtualisation.docker = {
+      enable = true;
+    };
 
   };
 
