@@ -12,21 +12,18 @@
   services.kanata = {
     enable = true;
     keyboards = {
-      mxkeys = {
-        devices = [
-          "/dev/input/event21" #warning this may change
-        ];
+      default = {
         extraDefCfg = "process-unmapped-keys yes";
         config = ''
         (defsrc
          caps
         )
         (defvar
-         tap-time 150
-         hold-time 200
+         tap-time 100
+         hold-time 125
         )
         (defalias
-         caps (tap-hold 200 200 esc lctl)
+         caps (tap-hold 125 125 esc lctl)
         )
 
         (deflayer base
