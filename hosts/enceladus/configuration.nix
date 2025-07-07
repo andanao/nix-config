@@ -106,6 +106,7 @@
     session-desktop
     orca-slicer
     kanata
+    unigine-superposition
   ];
 
 
