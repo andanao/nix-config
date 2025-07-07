@@ -21,6 +21,14 @@
             ./hosts/enceladus/configuration.nix
           ];
         };
+
+        serpens = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            nix-flatpak.nixosModules.nix-flatpak
+            ./hosts/serpens/configuration.nix
+          ];
+        };
       };
     };
 }
